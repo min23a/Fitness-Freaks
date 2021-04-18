@@ -1,0 +1,16 @@
+.banner{
+    background-image: url('../../../Images/danielle-cerullo-CQfNt66ttZM-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height : 500px;
+}
+.text_area{
+    height: 400px;
+}
+@media screen and (max-width: 480px) {
+    .banner{
+        background-image: url('../../../Images/samuel-girven-VJ2s0c20qCo-unsplash.jpg');
+        height : 400px;
+    }
+}

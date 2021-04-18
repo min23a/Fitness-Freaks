@@ -1,0 +1,12 @@
+.card_img{
+    height: 250px;
+    border-radius: 10px;
+}
+.card_shadow{
+    box-shadow: 0px 2px 10px #ff0000;
+}
+.card_shadow:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 10px #3dff02;
+    transition: 4000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
