@@ -39,16 +39,22 @@ const ManageOrder = () => {
         setId(id);
     }
 
-    const handleStatus = () => {
+    const handleStatus = (e) => {
         const updatedValue = document.getElementById('orderUpdate').value;
         fetch(`https://afternoon-ocean-70704.herokuapp.com/updateOrder/${id}`, {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ order: updatedValue })
         })
+        document.getElementById('success_text').classList.toggle('d-none')
+        setTimeout(() => {
+            window.location.reload()
+        }, 3000);
+        e.preventDefault()
     }
     return (
-        <div>
+        <div className="my-3">
+            <h6 id="success_text" className=" text-success d-none">Updated</h6>
             <form className="d-none" id="update" >
                 <input type="text" name="orderStatus" id="orderUpdate" placeholder='Input Status....' />
                 <button onClick={handleStatus} className="btn btn-success"><FontAwesomeIcon icon={faCheck} /></button>

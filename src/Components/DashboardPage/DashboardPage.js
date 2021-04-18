@@ -27,7 +27,7 @@ const DashboardPage = () => {
     return (
         <section className="bg-white">
             <Navbar />
-            <main className="d-flex" style={{ height: '100vh' }}>
+            <main className="d-flex">
                 <Sidebar />
                 <div className="container-fluid text-center pt-5">
                     {

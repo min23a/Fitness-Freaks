@@ -7,6 +7,7 @@ import AddService from './Components/Admin/AddService/AddService';
 import Blog from './Components/Blog\'s/Blog';
 import CheckoutPage from './Components/CheckoutPage/CheckoutPage';
 import DashboardPage from './Components/DashboardPage/DashboardPage';
+import ManageService from './Components/Admin/ManageService/MangeService';
 import Home from './Components/HomePage/Home';
 import Login from './Components/LoginPage/Login';
 import PrivateRoute from "./Components/LoginPage/PrivateRoute/PrivateRoute"
@@ -39,6 +40,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/addAdmin">
             <AddAdmin />
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
+            <ManageService />
           </PrivateRoute>
           <PrivateRoute path="/checkout/:id">
             <CheckoutPage />

@@ -27,7 +27,7 @@ const AddAdmin = () => {
             <Navbar />
             <main className="d-flex" style={{ height: '100vh' }}>
                 <Sidebar />
-                <form className="pl-5 m-5">
+                <form className=" m-5">
                     <input onBlur={handleChange} type="text" name="name" id="name" /><br /><br />
                     <input onBlur={handleChange} type="email" name="email" id="email" /><br /><br />
                     <input onBlur={handleChange} type="text" name="role" id="role" /><br /><br />

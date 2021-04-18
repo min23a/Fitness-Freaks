@@ -24,7 +24,7 @@ const AddReview = () => {
             <Navbar />
             <main className="d-flex" style={{ height: '100vh' }}>
                 <Sidebar />
-                <form className="pl-5 m-5">
+                <form className=" m-5">
                     <input onBlur={handleBlur} type="text" name="name" id="profileName" placeholder="Name" required /><br /><br />
                     <input onBlur={handleBlur} type="text" name="location" id="location" placeholder="Location" required /><br /><br />
                     <input onBlur={handleBlur} type="number" name="ratings" id="rating" placeholder="Ratings 0-5" required /><br /><br />

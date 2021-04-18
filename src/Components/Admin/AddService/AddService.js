@@ -46,9 +46,9 @@ const AddService = () => {
     return (
         <section className="bg-white">
             <Navbar />
-            <main className="d-flex" style={{ height: '100vh' }}>
+            <main className="d-flex">
                 <Sidebar />
-                <form className="pl-5 m-5" >
+                <form className="m-5" >
                     <input onBlur={handleBlur} type="text" name="name" id="name"  placeholder="Name..."/><br /><br />
                     <input onBlur={handleBlur} type="textarea" name="description" id="description"  placeholder="Description..."/><br /><br />
                     <input onChange={handleChange} type="file" name="img" id="img"  placeholder="Image..."/><br /><br />

@@ -4,21 +4,36 @@ import React, { useContext, useEffect, useState } from 'react';
 import { dataContext } from '../../../App';
 import stripeIcon from "../../../Images/stripe.png";
 import './CheckoutForm.css';
+import jwt_decode from "jwt-decode";
 
 const CheckoutForm = ({ service }) => {
     const stripe = useStripe();
     const elements = useElements();
     const { users } = useContext(dataContext);
-    const [user] = users;
+    const [user,setUser] = users;
+
+    const getMail = () => {
+        const token = sessionStorage.getItem('token');
+        if (!token) {
+            return false;
+        }
+        const decodedToken = jwt_decode(token);
+        setUser(decodedToken)
+    }
+console.log(user)
     const [order, setOrder] = useState({
-        name: user.name,
-        email: user.email,
+        name: '',
+        email: '',
         orderStatus : 'pending',
         paymentId: '',
         services: {}
     })
+
     const handleOrder = () => {
+        getMail();
         const newOrder = { ...order };
+        newOrder.name = user.name;
+        newOrder.email = user.email;
         newOrder.services = service;
         setOrder(newOrder);
     }
@@ -80,7 +95,7 @@ const CheckoutForm = ({ service }) => {
                     },
                 }}
             />
-            <button className="btn bg-white text-dark font-weight-bold my-4 d-flex align-items-center card_shadow" onMouseOver={handleOrder} type="submit" disabled={!stripe}>
+            <button className="btn bg-white text-dark font-weight-bold my-4 d-flex align-items-center card_shadow" onClick={handleOrder} type="submit" disabled={!stripe}>
                 <img src={stripeIcon} style={{height : '30px'}} alt="" className="img-fluid"/> Pay
             </button>
         </form>
