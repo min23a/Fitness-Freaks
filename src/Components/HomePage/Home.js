@@ -3,6 +3,7 @@ import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import Services from '../Shared/Services/Services';
 import Banner from './Banner/Banner';
+import ImageWithText from './ImageWithText/ImageWithText';
 import Partners from './Partners/Partners';
 import Reviews from './Reviews/Reviews';
 
@@ -12,6 +13,7 @@ const Home = () => {
             <Navbar/>
             <Banner/>
             <Services/>
+            <ImageWithText/>
             <Reviews/>
             <Partners/>
             <Footer/>
