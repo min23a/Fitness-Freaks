@@ -7,14 +7,14 @@ const MangeService = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://afternoon-ocean-70704.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     const handleDelete = (e) => {
         const serviceId = e.target.parentElement.id;
-        fetch(`http://localhost:5000/delete/${serviceId}`, { method: 'DELETE' })
+        fetch(`https://afternoon-ocean-70704.herokuapp.com/delete/${serviceId}`, { method: 'DELETE' })
         .then(res => console.log(res))
         document.getElementById(serviceId).remove()
     }
