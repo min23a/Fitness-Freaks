@@ -6,7 +6,7 @@ import './ReviewCard.css'
 const ReviewCard = ({review}) => {
     const {name,location,ratings,description} = review;
     return (
-        <div className="bg-dark review_shadow text-white m-3 col-lg-3 col-md-4 col-sm-6 p-3">
+        <div className="bg-dark rounded review_shadow text-white m-3 col-lg-3 col-md-4 col-sm-6 p-3">
             <h3>{name}</h3>
             <div className="row">
                 <div className="col-6">

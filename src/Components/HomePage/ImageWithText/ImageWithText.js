@@ -11,7 +11,7 @@ const ImageWithText = () => {
                 </div>
                 <div className="col-md-6 col-sm-12 d-flex flex-column justify-content-center">
                     <h3>Fitness Freak</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae libero quibusdam sapiente beatae nostrum voluptatibus, atque error porro dolor quod quas magnam. Natus cumque hic a aliquid animi dolore unde consectetur maiores, sapiente odio! Nemo ea, eum quos architecto quam cum quia facere sequi non rem quis, omnis labore?
+                    <p className="mr-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque recusandae libero quibusdam sapiente beatae nostrum voluptatibus, atque error porro dolor quod quas magnam. Natus cumque hic a aliquid animi dolore unde consectetur maiores, sapiente odio! Nemo ea, eum quos architecto quam cum quia facere sequi non rem quis, omnis labore?
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem possimus expedita distinctio esse maxime natus, inventore animi repellat quam voluptatum voluptas unde delectus. Accusantium autem minima nihil. Eligendi soluta magni sed. Non omnis recusandae sequi. Deserunt tenetur facilis maxime, cupiditate autem repellat impedit necessitatibus minima corporis. Laboriosam at illum consequuntur.
                     </p>
                     <div>
